@@ -1,5 +1,6 @@
 import six
-from django.utils.datastructures import SortedDict
+from collections import OrderedDict
+
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.importlib import import_module
 
@@ -22,7 +23,7 @@ def parse_config(config):
     if not config:
         return config
 
-    cfg = SortedDict()
+    cfg = OrderedDict()
     for key, value in six.iteritems(config):
         if isinstance(value, (tuple, list)):
             if len(value) == 2:
