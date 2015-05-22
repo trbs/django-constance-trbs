@@ -2,6 +2,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.db.models.signals import post_save
 try:
     from django.core.cache import caches
+
     def get_cache(key):
         return caches[key]
 except ImportError:
