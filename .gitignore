@@ -5,4 +5,5 @@
 *.egg
 build/
 dist/
+.eggs/
 test.db
