@@ -8,6 +8,7 @@ python:
 
 env:
   - DJANGO=Django==1.7
+  - DJANGO=Django==1.8
   - DJANGO="git+git://github.com/django/django.git@master#egg=django"
 
 install:
@@ -27,3 +28,4 @@ matrix:
       env: DJANGO="git+git://github.com/django/django.git@master#egg=django"
   allow_failures:
       - env: DJANGO="git+git://github.com/django/django.git@master#egg=django"
+
