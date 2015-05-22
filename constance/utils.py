@@ -2,7 +2,10 @@ import six
 from collections import OrderedDict
 
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.importlib import import_module
+try:
+    from importlib import import_module
+except ImportError:
+    from django.utils.importlib import import_module
 
 CONFIGURATION_ERROR = ("Constance configuration key '%s' must have either a "
                        "2-tuple with default value and help text or a dictionary "
