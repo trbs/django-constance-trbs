@@ -53,6 +53,10 @@ if not six.PY3:
     })
 
 
+def false_func(*args, **kwargs):
+    return False
+
+
 class ConstanceForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(ConstanceForm, self).__init__(*args, **kwargs)
@@ -155,7 +159,7 @@ class Config(object):
         object_name = 'Config'
         model_name = module_name = 'config'
         verbose_name_plural = _('config')
-        get_ordered_objects = lambda x: False
+        get_ordered_objects = false_func
         abstract = False
         swapped = False
 
