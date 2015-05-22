@@ -2,7 +2,7 @@ import django
 from django.db.models import signals
 
 
-def create_perm(app, created_models, verbosity, db, **kwargs):
+def create_perm(*func_args, **func_kwargs):
     """
     Creates a fake content type and permission
     to be able to check for permissions
